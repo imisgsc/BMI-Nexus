@@ -1,0 +1,382 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 60px;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+header .logo h1 {
+    font-size: 2rem;
+    color: #009CDE; /* Philips Blue */
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Navbar */
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.nav-btn {
+    background-color: #006F9F;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #004C73; /* Darker blue */
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('images/hero.jpeg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    z-index: 1;
+}
+
+.hero .hero-content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    font-weight: 500;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    max-width: 800px;
+    z-index: 2; /* Ensures text is above the blurred image */
+}
+
+.hero .hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sign-in {
+    background-color: #199dd6; /* Philips Blue */
+    color: #fff;
+}
+
+.sign-in:hover {
+    background-color: #004C73;
+}
+
+.sign-up {
+    background-color: #199dd6;
+    color: #fff;
+}
+
+.sign-up:hover {
+    background-color: #004C73;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 5;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #333333; /* Dark Gray */
+}
+
+
+
+
+
+/* Login styles*/
+/* Background Image */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('images/hero.jpeg'); /* Replace with actual image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Blurred Background */
+    z-index: -1;
+}
+/* Centered Login Form */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login Card */
+.login-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading */
+.login-card h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Subtext */
+.login-card p {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(90, 76, 76, 0.2);
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.input-group input:focus {
+    background: rgba(132, 120, 120, 0.3);
+    outline: none;
+    transform: scale(1.03);
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #199dd6;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.login-btn:hover {
+    background-color: #147bb0;
+    transform: scale(1.05);
+}
+
+/* Register Link */
+.register-link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+.register-link a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+/*Sign up Styles*/
+/* Sign-Up Container */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 30px;
+}
+
+/* Sign-Up Card */
+.signup-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(2px);
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 380px;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Input Fields */
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #000;
+    transition: 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+    transform: scale(1.03);
+}
+
+/* Sign-Up Button */
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #199dd6;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.signup-btn:hover {
+    background-color: #147bb0;
+    transform: scale(1.05);
+}
+
+/* Login Link */
+.login-link {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+.login-link a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .signup-card {
+        width: 95%;
+    }
+}
+
+/* Hide Scrollbar in Sign-Up Card */
+.signup-card::-webkit-scrollbar {
+    display: none;  /* Hides scrollbar for Webkit browsers */
+}
+
+.signup-card {
+    scrollbar-width: none; /* Hides scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hides scrollbar for Internet Explorer */
+}

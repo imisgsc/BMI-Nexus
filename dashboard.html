@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | BMI Nexus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>BMI Nexus</h1>
+        </div>
+        <button id="logoutBtn">Logout</button>
+    </header>
+
+    <div class="dashboard-container">
+        <h2>Welcome to the Dashboard!</h2>
+        <p>This is your personalized dashboard where you can track your BMI data and get diet recommendations.</p>
+        <!-- Add more content as needed -->
+    </div>
+
+    <script type="module">
+        import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+
+        const auth = getAuth();
+        const logoutBtn = document.getElementById('logoutBtn');
+
+        // Logout functionality
+        logoutBtn.addEventListener('click', () => {
+            signOut(auth)
+                .then(() => {
+                    // Sign-out successful, redirect to login page
+                    window.location.href = 'login.html';
+                })
+                .catch((error) => {
+                    console.error('Error signing out:', error);
+                });
+        });
+    </script>
+</body>
+</html>
